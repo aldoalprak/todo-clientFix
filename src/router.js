@@ -1,21 +1,35 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
-import About from './views/About.vue'
+import VueRouter from 'vue-router'
+import Login from './views/Login.vue'
+import Todo from './views/Todo.vue'
+import Register from './views/Register.vue'
 
-Vue.use(Router)
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: About
-    }
-  ]
-})
+
+Vue.use(VueRouter)
+
+export default 
+    new VueRouter({
+        routes: [
+            {
+                name:"login",
+                path:'/',
+                component:Login 
+            },
+            {
+                name:"register",
+                path:'/register',
+                component:Register
+            },
+            {
+                name:"todo",
+                path:'/todo', 
+                component: Todo
+            },
+            
+        ],
+        mode:"history"
+    })
+
+
+
