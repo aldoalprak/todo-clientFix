@@ -105,7 +105,7 @@ export default {
         getTodo() {
             axios({
                 method:"get",
-                url:"http://localhost:3000/todos/show",
+                url:"https://api_todo.alprak.net/todos/show",
                 headers:{
                    token: localStorage.getItem("token")
                 }
@@ -155,7 +155,7 @@ export default {
                     request.execute(function(event) {
                         axios({
                             method:"post",
-                            url:"http://localhost:3000/todos/add",
+                            url:"https://api_todo.alprak.net/todos/add",
                             data:{
                                 task_name:self.task_name,
                                 description:self.description,
@@ -208,7 +208,7 @@ export default {
 
                     axios({
                         method:"delete",
-                        url:`http://localhost:3000/todos/delete/${todo._id}`,
+                        url:`https://api_todo.alprak.net/todos/delete/${todo._id}`,
                         headers: {
                             token:localStorage.getItem("token")
                         }
@@ -277,7 +277,7 @@ export default {
                         console.log(event)
                         axios({
                             method:"put",
-                            url: `http://localhost:3000/todos/update/${todo._id}`,
+                            url: `https://api_todo.alprak.net/todos/update/${todo._id}`,
                             data: {
                                 task_name: result.value[0],
                                 description: result.value[1],

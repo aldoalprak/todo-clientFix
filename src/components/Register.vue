@@ -80,7 +80,7 @@ export default {
                 }else{
                     axios({
                         method:"post",
-                        url:"http://localhost:3000/users/signup",
+                        url:"https://api_todo.alprak.net/users/signup",
                         data: {
                             username: this.username,
                             password: this.password,

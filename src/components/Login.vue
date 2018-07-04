@@ -104,7 +104,7 @@ export default {
                         'warning'
                     )
                 }else{
-                    axios.post('http://localhost:3000/users/signin',{
+                    axios.post('https://api_todo.alprak.net/users/signin',{
                         email:this.email,
                         password:this.password
                     })
@@ -134,7 +134,7 @@ export default {
                        console.log(dataUser)
                        axios({
                            method:"post",
-                           url:'http://localhost:3000/users/signin',
+                           url:'https://api_todo.alprak.net/users/signin',
                            data: {
                                email: dataUser.email,
                                username: dataUser.first_name,
